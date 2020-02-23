@@ -8,7 +8,7 @@ class Header extends Component {
     render() {
         return (
                 <nav>
-                    <div class="logo">
+                    <div className="logo">
                 <a 
                 href="#home">
                     <img 
@@ -16,7 +16,7 @@ class Header extends Component {
                     id="logo" />
                 </a>
                 </div>
-                <div class="boxes">
+                <div className="boxes">
                     <a id="nav" href="#games">GAMES</a>
                     <a id="nav" href="#teams">TEAMS</a>
                     <a id="nav" href="#login">LOG IN</a>
