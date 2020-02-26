@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "./styles.scss";
 import live from "../../assets/live.svg"
 import SVG from "react-inlinesvg";
+import Match from '../Match/Match';
 
 class LiveGames extends Component {
     state = {};
@@ -16,7 +17,7 @@ class LiveGames extends Component {
                     <p id="livegamestext">LIVE GAMES</p>
                 </div>
                 <div className="games">
-
+                    <Match />
                 </div>
             </div>
         );

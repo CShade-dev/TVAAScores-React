@@ -11,10 +11,11 @@ body {
 .overlay {
   position: fixed;
   z-index: -1;
-  background-image: url("assets/background.jpg");
-  background-blend-mode: darken;
-  background-position: center; 
+  animation: bgfade 25s infinite;
+  background-blend-mode: multiply;
   background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
   background-size: cover;
   opacity: 0.85;
   top: 0; left: 0; right: 0; bottom: 0;
