@@ -6,7 +6,7 @@ class Team extends Component {
     render() {
         const color = this.props.color
         return (
-            <div style={{backgroundColor: color}}>
+            <div className="team" style={{backgroundColor: color}}>
                 <h1>
                     {this.props.name}
                 </h1>

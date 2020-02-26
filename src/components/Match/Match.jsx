@@ -10,7 +10,7 @@ class Match extends Component {
             <div>
                 <h1></h1>
                 <Team name="Upper Dauphin" score="31" color="orange"/>
-                <Team />
+                <Team name="Millersburg" score="3" color="maroon" />
             </div>
         );
     }
