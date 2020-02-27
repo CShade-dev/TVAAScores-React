@@ -17,7 +17,7 @@ class LiveGames extends Component {
                     <p id="livegamestext">LIVE GAMES</p>
                 </div>
                 <div className="games">
-                    <Match />
+                    <Match quarter="f" />
                 </div>
             </div>
         );
