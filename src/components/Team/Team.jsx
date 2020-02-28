@@ -2,15 +2,19 @@ import React, { Component } from 'react';
 import "./styles.scss";
 
 class Team extends Component {
-    state = {};
+    state = {
+        loading: true,
+        game: null,
+    };
+    componentDidMount (){};
     render() {
-        const color = this.props.color
+        const color = this.state.game.color
         return (
             <div className="team" style={{backgroundColor: color}}>
                 <h1>
-                    {this.props.name}
+                    {this.state.game.name}
                 </h1>
-                <p>{this.props.score}</p>
+                <p>{this.state.game.score}</p>
             </div>
         );
     }

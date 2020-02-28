@@ -3,10 +3,17 @@ import "./styles.scss";
 import Team from "../Team/Team";
 
 class Match extends Component {
-    state = {};
+    
+    state = {
+        loading: true,
+        game: null,
+    };
+    componentDidMount () {
 
+    }
     render() {
-        var quarter = this.props.quarter;
+        
+        var quarter = this.state.game.quarter;
         if (quarter === "1q") {
             quarter = "1st Quarter";
         } else if (quarter === "2q") {
@@ -22,6 +29,7 @@ class Match extends Component {
         } else if (quarter === "f") {
             quarter = "Final";
         }
+
         return (
             <div>
                 <h1>{quarter}</h1>
