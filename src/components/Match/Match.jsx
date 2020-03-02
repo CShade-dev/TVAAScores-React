@@ -6,7 +6,9 @@ class Match extends Component {
     
     state = {
         loading: true,
-        game: null,
+        game: {
+            quarter: this.props.quarter
+        }
     };
     componentDidMount () {
 
@@ -31,10 +33,14 @@ class Match extends Component {
         }
 
         return (
-            <div>
-                <h1>{quarter}</h1>
-                <Team name="Upper Dauphin" score={31} color="orange"/>
-                <Team name="Millersburg" score={3} color="maroon" />
+            <div className="matchDiv">
+                <div className="quarter">
+                    <h1 id="quarterheader">{quarter}</h1>
+                </div>
+                <div className="teams">
+                    <Team name="Upper Dauphin" score={31} color="orange"/>
+                    <Team name="Millersburg" score={3} color="maroon" />
+                </div>
             </div>
         );
     }

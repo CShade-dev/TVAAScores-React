@@ -4,7 +4,11 @@ import "./styles.scss";
 class Team extends Component {
     state = {
         loading: true,
-        game: null,
+        game: {
+            name: this.props.name,
+            score: this.props.score,
+            color: this.props.color
+        }
     };
     componentDidMount (){};
     render() {
