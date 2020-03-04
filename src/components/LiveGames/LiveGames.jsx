@@ -18,6 +18,8 @@ class LiveGames extends Component {
                 </div>
                 <div className="games">
                     <Match quarter="f" />
+                    <Match quarter="f" />
+                    <Match quarter="f" />
                 </div>
             </div>
         );
