@@ -48,7 +48,7 @@ class Match extends Component {
                 <div className="quarter">
                     <h1 id="quarterheader">{quarter}</h1>
                 </div>
-                <div className="teams">
+                <div className="teams__match">
                     <Team name={this.state.game.home.name} 
                     score={this.state.game.home.score} 
                     color={this.state.game.home.color} />

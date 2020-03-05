@@ -9,7 +9,7 @@ class Team extends Component {
                 <h1>
                     {name}
                 </h1>
-                <p>{score}</p>
+                <p className="score">{score}</p>
             </div>
         );
     }
