@@ -3,12 +3,13 @@ import "./styles.scss";
 
 class Team extends Component {
     render() {
-        const { color, name, score } = this.props;
+        const { color, name, score, logo } = this.props;
         return (
             <div className="team" style={{backgroundColor: color}}>
                 <h1 className="teamname">
                     {name}
                 </h1>
+                <img src={logo} className="teamlogo" />
                 <p className="score">
                     {score}
                 </p>
