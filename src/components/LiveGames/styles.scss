@@ -10,8 +10,7 @@
     border-top-right-radius: 25px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
-    height: 480px;
-    max-height: 480px;
+    height: auto;
 }
 
 .liveheader {
@@ -44,5 +43,7 @@
 }
 
 .games {
-    display: flex;
+    display: grid;
+    grid-template-columns: calc(100% /3) calc(100% /3) calc(100% /3);
+    row-gap: 35px;
 }

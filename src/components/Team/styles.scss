@@ -1,6 +1,8 @@
-.team {
+.teamdiv {
     width: 50%;
     height: 100px;
+}
+.team {
     position: relative;
 }
 .teamname {
@@ -9,6 +11,7 @@
     padding: 0;
     margin: 0;
     text-align: center;
+    text-transform: capitalize;
 }
 .score {
     position: absolute;
@@ -20,4 +23,19 @@
     font-weight: bold;
     text-align: center;
     color: white;
+}
+.side {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 5px;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
+}
+.teamnamediv {
+    height: 20px;
+    padding: 5px;
 }

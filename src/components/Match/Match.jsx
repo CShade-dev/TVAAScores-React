@@ -13,13 +13,15 @@ class Match extends Component {
                 name: "Upper Dauphin",
                 score: 31,
                 logo: hometeam,
-                color: "orange"
+                color: "orange",
+                side: "Home"
             },
             away: {
                 name: "Millersburg",
                 score: 3,
                 logo: awayteam,
-                color: "maroon"
+                color: "maroon",
+                side: "Away"
             }
         }
     };
@@ -38,11 +40,13 @@ class Match extends Component {
                     <Team name={this.state.game.home.name} 
                     score={this.state.game.home.score} 
                     color={this.state.game.home.color}
-                    logo={this.state.game.home.logo} />
+                    logo={this.state.game.home.logo} 
+                    side={this.state.game.home.side} />
                     <Team name={this.state.game.away.name} 
                     score={this.state.game.away.score} 
                     color={this.state.game.away.color}
-                    logo={this.state.game.away.logo} />
+                    logo={this.state.game.away.logo}
+                    side={this.state.game.away.side} />
                 </div>
             </div>
         );
