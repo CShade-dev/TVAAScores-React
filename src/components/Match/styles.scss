@@ -1,10 +1,12 @@
 .matchDiv {
     border-radius: 25px;
-    width: 27%;
+    justify-content: center;
     margin: auto;
 }
 #quarterheader {
     font-size: 22px;
+    color: white;
+    text-align: center;
 }
 .teams__match {
     display: inline-flex;

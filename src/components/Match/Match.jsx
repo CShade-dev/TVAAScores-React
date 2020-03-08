@@ -25,24 +25,8 @@ class Match extends Component {
 
     }
     render() {
-        
-        var quarter = this.props.quarter;
-        if (quarter === "1q") {
-            quarter = "1st Quarter";
-        } else if (quarter === "2q") {
-            quarter = "2nd Quarter";
-        } else if (quarter === "1h") {
-            quarter = "1st Half";
-        } else if (quarter === "3q") {
-            quarter = "3rd Quarter";
-        } else if (quarter === "4q") {
-            quarter = "4th Quarter";
-        } else if (quarter === "2h") {
-            quarter = "2nd Half";
-        } else if (quarter === "f") {
-            quarter = "Final";
-        }
 
+        let quarter = this.props.matchquarter;
         return (
             <div className="matchDiv">
                 <div className="quarter">

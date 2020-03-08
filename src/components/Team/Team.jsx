@@ -6,10 +6,12 @@ class Team extends Component {
         const { color, name, score } = this.props;
         return (
             <div className="team" style={{backgroundColor: color}}>
-                <h1>
+                <h1 className="teamname">
                     {name}
                 </h1>
-                <p className="score">{score}</p>
+                <p className="score">
+                    {score}
+                </p>
             </div>
         );
     }

@@ -3,6 +3,7 @@ import "./styles.scss";
 import live from "../../assets/live.svg"
 import SVG from "react-inlinesvg";
 import Match from '../Match/Match';
+import quarters from '../quarters';
 
 class LiveGames extends Component {
     state = {};
@@ -17,9 +18,9 @@ class LiveGames extends Component {
                     <p id="livegamestext">LIVE GAMES</p>
                 </div>
                 <div className="games">
-                    <Match quarter="f" />
-                    <Match quarter="f" />
-                    <Match quarter="f" />
+                    <Match matchquarter={quarters.QUARTER_ONE} />
+                    <Match matchquarter={quarters.QUARTER_ONE} />
+                    <Match matchquarter={quarters.QUARTER_ONE} />
                 </div>
             </div>
         );

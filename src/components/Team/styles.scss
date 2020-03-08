@@ -1,16 +1,23 @@
 .team {
     width: 50%;
+    height: 100px;
     position: relative;
 }
-h1 {
+.teamname {
     font-size: 15px;
     color: white;
     text-align: center;
+    padding: 0;
+    margin: 0;
 }
-.class {
+.score {
     position: absolute;
-    bottom: 0%;
-    left: 0%;
-    padding: 20px;
-    width: 100%;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
 }
