@@ -1,49 +1,52 @@
-@import "../../assets/palette.scss";
+    @import "../../assets/palette.scss";
 
-.livegames {
-    background-color: $color3;
-    width: 80%;
-    max-width: 1080px;
-    margin: auto;
-    margin-top: 45px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    height: auto;
-}
+    .livegames {
+        background-color: $color3;
+        width: 80%;
+        max-width: 1080px;
+        margin: auto;
+        margin-top: 45px;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        height: auto;
+        padding: auto;
+    }
 
-.liveheader {
-    background-color: $color1;
-    height: 12.5%;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-}
+    .liveheader {
+        background-color: $color1;
+        height: 12.5%;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+    }
 
-.liveicon {
-    font-weight: bold;
-    display: inline-flex;
-    align-self: center;
-    margin-left: 15px;
-    & svg {
-        fill: $color5;
-        top: .325em;
-        position: relative;
+    .liveicon {
+        font-weight: bold;
+        display: inline-flex;
+        align-self: center;
+        margin-left: 15px;
+        & svg {
+            fill: $color5;
+            top: .325em;
+            position: relative;
+        }
+    }
+
+    #livegamestext {
+        color: $color5;
+        font-weight: bold;
+        font-size: 18px;
+        display:inline-flex;
+        align-self: center;
+        margin-left: 7px;
+        bottom: 3px;
+    }
+
+    .games {
+        display: grid;
+        grid-template-columns: calc(100% /3) calc(100% /3) calc(100% /3);
+    }
+    .games > .matchDiv {
+        height: 200px;
       }
-}
-
-#livegamestext {
-    color: $color5;
-    font-weight: bold;
-    font-size: 18px;
-    display:inline-flex;
-    align-self: center;
-    margin-left: 7px;
-    bottom: 3px;
-}
-
-.games {
-    display: grid;
-    grid-template-columns: calc(100% /3) calc(100% /3) calc(100% /3);
-    row-gap: 35px;
-}
