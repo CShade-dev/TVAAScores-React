@@ -38,7 +38,27 @@ nav {
     padding: 15px;
     text-decoration: none;
 }
-
+#hamburger {
+    display: none;
+}
 #nav:hover {
     background-color: rgba(0, 70, 99, 1);
+}
+@media only screen and (max-width: 600px) {
+    #nav {
+        display: none;
+  } 
+  #hamburger {
+      position: absolute;
+      display: inline-flex;
+      right: 15px;
+      margin: auto;
+      width: 50px;
+      height: 75px;
+      justify-content: flex-end;
+  }
+  nav {
+      display: inline-flex;
+      justify-content: flex-start;
+  }
 }

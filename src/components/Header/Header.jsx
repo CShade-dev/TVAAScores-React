@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "./styles.scss";
 import logo from "../../assets/tvaa.png";
+import hamburger from "../../assets/hamburger.svg";
 
 class Header extends Component {
     state = {};
@@ -20,7 +21,10 @@ class Header extends Component {
                     <a id="nav" href="#games">GAMES</a>
                     <a id="nav" href="#teams">TEAMS</a>
                     <a id="nav" href="#login">LOG IN</a>
-                    </div>
+                </div>
+                <img 
+                src={hamburger}
+                id="hamburger" />
                 </nav>
         );
     }
