@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import "./styles.scss";
 import logo from "../../assets/tvaa.png";
-import hamburger from "../../assets/hamburger.svg";
 
 class Header extends Component {
     state = {};
 
     render() {
+        myFunction = () => {
+            this.classList.toggle("change");
+          }
         return (
                 <nav>
                     <div className="logo">
@@ -14,7 +16,8 @@ class Header extends Component {
                 href="#home">
                     <img 
                     src={logo} 
-                    id="logo" />
+                    id="logo"
+                    alt="Tri Valley Athletic Association" />
                 </a>
                 </div>
                 <div className="boxes">
@@ -22,9 +25,11 @@ class Header extends Component {
                     <a id="nav" href="#teams">TEAMS</a>
                     <a id="nav" href="#login">LOG IN</a>
                 </div>
-                <img 
-                src={hamburger}
-                id="hamburger" />
+                    <div class="hamburger" onclick={this.myFunction}>
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
                 </nav>
         );
     }
