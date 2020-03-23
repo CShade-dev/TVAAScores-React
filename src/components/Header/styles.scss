@@ -13,6 +13,7 @@ nav {
     justify-content: space-around;
     height: 12.5%;
     top: 0;
+    z-index: 2;
     background-color: $color1;
     width: 100%;
     position: sticky;
@@ -38,7 +39,47 @@ nav {
     padding: 15px;
     text-decoration: none;
 }
-
+#hamburger {
+    display: none;
+}
 #nav:hover {
     background-color: rgba(0, 70, 99, 1);
+}
+@media only screen and (max-width: 600px) {
+    #nav {
+        display: none;
+  } 
+  .hamburger {
+      position: absolute;
+      display: inline-block;
+      right: 15px;
+      margin: auto;
+      justify-content: flex-end;
+      cursor: pointer;
+  }
+  nav {
+      display: inline-flex;
+      justify-content: flex-start;
+      position: sticky;
+      z-index: 2;
+  }
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: $color2;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
 }

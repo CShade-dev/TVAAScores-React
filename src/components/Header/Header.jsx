@@ -8,6 +8,9 @@ class Header extends Component {
     };
 
     render() {
+        myFunction = () => {
+            this.classList.toggle("change");
+          }
         return (
                 <nav>
                     <div className="logo">
@@ -15,13 +18,19 @@ class Header extends Component {
                 href="#home">
                     <img 
                     src={logo} 
-                    id="logo" />
+                    id="logo"
+                    alt="Tri Valley Athletic Association" />
                 </a>
                 </div>
                 <div className="boxes">
                     <a id="nav" href="#games">GAMES</a>
                     <a id="nav" href="#teams">TEAMS</a>
                     <a id="nav" href="#login">LOG IN</a>
+                </div>
+                    <div class="hamburger" onclick={this.myFunction}>
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
                     </div>
                 </nav>
         );

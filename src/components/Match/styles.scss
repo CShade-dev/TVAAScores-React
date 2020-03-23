@@ -8,7 +8,7 @@
     color: white;
     text-align: center;
     padding-bottom: 0;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 .teams__match {
     display: inline-flex;
@@ -23,4 +23,11 @@
     display: inline-block;
     text-align: center;
     padding: 15px;
+}
+@media only screen and (max-width: 600px) {
+    .matchDiv {
+        justify-content: center;
+        margin: auto;
+        text-align: center;
+    }
 }

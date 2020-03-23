@@ -48,5 +48,13 @@
         grid-template-columns: calc(100% /3) calc(100% /3) calc(100% /3);
     }
     .games > .matchDiv {
-        height: 200px;
+        height: 225px;
       }
+      @media only screen and (max-width: 600px) {
+        .games {
+          display: block;
+          justify-content: center;
+          margin: auto;
+          width: auto;
+      } 
+    }
