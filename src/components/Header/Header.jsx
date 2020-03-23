@@ -3,7 +3,9 @@ import "./styles.scss";
 import logo from "../../assets/tvaa.png";
 
 class Header extends Component {
-    state = {};
+    state = {
+        authenticated: false
+    };
 
     render() {
         return (
