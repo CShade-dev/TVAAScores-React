@@ -13,7 +13,7 @@ class Team extends Component {
                     </h1>
                 </div>
                 <div className="team" style={{backgroundColor: color}}>
-                    <img src={logo} className="teamlogo" />
+                    <img src={logo} alt={name} className="teamlogo" />
                     <p className="side">
                         {side}
                     </p>
