@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import "./styles.scss";
 
-class Login extends Component {
+class Teams extends Component {
     state = {};
 
     render() {
         return (
-            <h1>Login</h1>
+            <h1>Teams</h1>
         );
     }
 }
 
-export default Login;
+export default Teams;
