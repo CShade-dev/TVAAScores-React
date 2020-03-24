@@ -25,26 +25,26 @@ nav {
         0 100px 80px rgba(0, 0, 0, 0.07);
     align-items: center;
 }
-
-
-.boxes {
-    justify-content: center;
-}
-
+.nav:not(:first-of-type) {
+    margin-left: 15px;
+  }
+  .nav:first-of-type {
+    margin-left: 20vw;
+  }
 .mobileboxes {
     display: none;
 }
 
-#mobilenav {
+.mobilenav {
     display: none;
 }
 
-#nav {
+.nav {
     color: $color2;
     font-weight: bold;
     font-size: 24px;
     height: 100%;
-    padding: 15px;
+    padding: 25px;
     text-decoration: none;
 }
 
@@ -52,12 +52,12 @@ nav {
     display: none;
 }
 
-#nav:hover {
+.nav:hover {
     background-color: rgba(0, 70, 99, 1);
 }
 
 @media only screen and (max-width: 600px) {
-    #nav {
+    .nav {
         display: none;
     }
 
@@ -116,7 +116,7 @@ nav {
         right: 0%;
         transition: right 1s;
     }
-    .change #mobilenav {
+    .change .mobilenav {
         display: block;
         color: $color2;
         font-weight: bold;

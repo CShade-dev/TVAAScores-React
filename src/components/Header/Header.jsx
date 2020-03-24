@@ -25,9 +25,9 @@ class Header extends Component {
                 </a>
                 </div>
                 <div className="boxes">
-                    <Link to="/games" id="nav">GAMES</Link>
-                    <Link to="/teams" id="nav">TEAMS</Link>
-                    <Link to="/login" id="nav">LOG IN</Link>
+                    <Link to="/games" className="nav">GAMES</Link>
+                    <Link to="/teams" className="nav">TEAMS</Link>
+                    <Link to="/login" className="nav">LOG IN</Link>
                 </div>
                     <div className="hamburger" onClick={this.navFunc}>
                         <div className="bar1"></div>
@@ -35,9 +35,9 @@ class Header extends Component {
                         <div className="bar3"></div>
                     </div>
                 <div className="mobileboxes">
-                    <Link to="/games" id="mobilenav">GAMES</Link>
-                    <Link to="/teams" id="mobilenav">TEAMS</Link>
-                    <Link to="/login" id="mobilenav">LOG IN</Link>
+                    <Link to="/games" className="mobilenav">GAMES</Link>
+                    <Link to="/teams" className="mobilenav">TEAMS</Link>
+                    <Link to="/login" className="mobilenav">LOG IN</Link>
                 </div>
                 </nav>
         );
