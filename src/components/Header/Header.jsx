@@ -16,18 +16,17 @@ class Header extends Component {
         return (
                 <nav>
                     <div className="logo">
-                <a 
-                href="#home">
+                    <Link to="/">
                     <img 
                     src={logo} 
                     id="logo"
                     alt="Tri Valley Athletic Association" />
-                </a>
+                    </Link>
                 </div>
                 <div className="boxes">
                     <Link to="/games" className="nav">GAMES</Link>
                     <Link to="/teams" className="nav">TEAMS</Link>
-                    <Link to="/login" className="nav">LOG IN</Link>
+                    <Link to="/login" className="nav">LOGIN</Link>
                 </div>
                     <div className="hamburger" onClick={this.navFunc}>
                         <div className="bar1"></div>
@@ -37,7 +36,7 @@ class Header extends Component {
                 <div className="mobileboxes">
                     <Link to="/games" className="mobilenav">GAMES</Link>
                     <Link to="/teams" className="mobilenav">TEAMS</Link>
-                    <Link to="/login" className="mobilenav">LOG IN</Link>
+                    <Link to="/login" className="mobilenav">LOGIN</Link>
                 </div>
                 </nav>
         );

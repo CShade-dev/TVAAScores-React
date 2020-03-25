@@ -1,0 +1,49 @@
+@import "../../assets/palette.scss";
+
+.loginheader {
+    background-color: $color1;
+    height: 5%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.formcontainer {
+    background-color: $color3;
+    width: 30%;
+    margin: auto;
+    margin-top: 45px;
+    border-radius: 25px;
+    min-width: 450px;
+}
+
+.usericon {
+    font-weight: bold;
+    display: inline-flex;
+    align-self: center;
+    margin-left: 15px;
+    & svg {
+        fill: $color5;
+        top: .325em;
+        position: relative;
+    }
+}
+
+.logintitle {
+    color: $color5;
+    font-weight: bold;
+    font-size: 18px;
+    display:inline-flex;
+    align-self: center;
+    margin-left: 7px;
+    bottom: 3px;
+}
+
+label {
+    display: block;
+    color: $color5;
+    text-align: center;
+}
+input {
+    display: block;
+    margin: auto;
+}

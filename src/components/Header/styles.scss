@@ -31,6 +31,9 @@ nav {
   .nav:first-of-type {
     margin-left: 20vw;
   }
+  .logo {
+      margin-left: 10vw;
+  }
 .mobileboxes {
     display: none;
 }
@@ -69,7 +72,12 @@ nav {
         justify-content: flex-end;
         cursor: pointer;
     }
-
+    .logo {
+        margin: 0;
+    }
+    #logo {
+        margin-left: 0;
+    }
     nav {
         display: inline-flex;
         justify-content: flex-start;
@@ -124,5 +132,10 @@ nav {
         height: 100%;
         padding: 25px;
         text-decoration: none;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .logo {
+        margin-left: 5vw;
     }
 }

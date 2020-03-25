@@ -50,6 +50,12 @@
     .games > .matchDiv {
         height: 225px;
       }
+      @media only screen and (max-width: 1000px) {
+        .games {
+            display: grid;
+            grid-template-columns: calc(100% /2) calc(100% /2);
+        }
+      }
       @media only screen and (max-width: 600px) {
         .games {
           display: block;
