@@ -8,10 +8,10 @@ class LoginForm extends Component {
         email: "",
         password: "",
     };
-    onSubmit = e => {
+    onSubmit = async e => {
         console.log(this.state)
         e.preventDefault();
-        fetch(
+        await fetch(
           "http://localhost:9000/login",
             {
             method: 'POST',
@@ -20,7 +20,15 @@ class LoginForm extends Component {
                 'Content-Type': 'application/json'
               },
             }
-        );
+        )
+        .then(res => {
+            if (res.status === 401) {
+                document.getElementById("errormessage").hidden = false;
+            } else {
+                window.location.replace("http://localhost/");
+            }
+        }
+        )
       }
     render() {
         return (
