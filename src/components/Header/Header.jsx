@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
 import "./styles.scss";
+import { connect } from 'react-redux';
 import logo from "../../assets/tvaa.png";
 import { Link } from "react-router-dom";
 
+function mapStateToProps(state) {
+    return { authenticated: state.authenticated }
+}
+
 class Header extends Component {
-    state = {
-        authenticated: false
-    };
     navFunc = () => {
         const el = document.querySelector("nav");
         console.log(el);
         el.classList.toggle("change");
     };
     render() {
-        return this.state.authenticated ? (
+        return this.props.authenticated ? (
                 <nav>
                     <div className="logo">
                     <Link to="/">
@@ -69,4 +71,4 @@ class Header extends Component {
     }
 }
 
-export default Header;
+export default connect(mapStateToProps)(Header);

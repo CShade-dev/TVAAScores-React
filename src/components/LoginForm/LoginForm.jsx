@@ -2,6 +2,19 @@ import React, { Component } from 'react';
 import SVG from "react-inlinesvg";
 import user from "../../assets/user.svg";
 import "./styles.scss";
+import { connect } from 'react-redux';
+import { createBrowserHistory } from 'history';
+
+const history = createBrowserHistory();
+
+function mapStateToProps(state) {
+    return state
+}
+const mapDispatchToProps = dispatch => {
+    return {
+      authenticate: () => dispatch({ type: 'AUTH' }),
+    }
+  }
 
 class LoginForm extends Component {
     state = {
@@ -26,7 +39,8 @@ class LoginForm extends Component {
                 document.getElementById("errormessage").style.display = "flex";
                 document.getElementById("formcontainer").style.height = "425px";
             } if (res.status === 200) {
-                window.location.assign("http://localhost:3000/");
+                this.props.authenticate()
+                history.goBack()
             }
         }
         )
@@ -62,4 +76,4 @@ class LoginForm extends Component {
     }
 }
 
-export default LoginForm;
+export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);
