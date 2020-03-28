@@ -23,37 +23,40 @@ class LoginForm extends Component {
         )
         .then(res => {
             if (res.status === 401) {
-                document.getElementById("errormessage").hidden = false;
-            } else {
-                window.location.replace("http://localhost/");
+                document.getElementById("errormessage").style.display = "flex";
+                document.getElementById("formcontainer").style.height = "425px";
+            } if (res.status === 200) {
+                window.location.assign("http://localhost:3000/");
             }
         }
         )
       }
     render() {
         return (
-            <div className="formcontainer">
+            <div className="formcontainer" id="formcontainer">
                 <div className="loginheader">
                     <div className="usericon">
                         <SVG src={user} />
                     </div>
                     <p className="logintitle">LOGIN</p>
                 </div>
+                <div id="errormessage">
+                    <p className="errormessagetext">Incorrect Email/Password!</p>
+                </div>
                 <div className="loginform">
                     <form onSubmit={this.onSubmit} className="form">
                         <div className="emailinput">
-                            <label>Email:</label>
-                            <input type="email"  name="email" id="email" onChange={e => this.setState({ email: e.target.value})} required />
+                            <input type="email"  name="email" id="email" placeholder="Email" onChange={e => this.setState({ email: e.target.value})} required />
                         </div>
                         <div className="passwordinput">
-                            <label>Password:</label>
-                            <input type="password" name="password" id="password" onChange={e => this.setState({ password: e.target.value})} required />
+                            <input type="password" name="password" id="password" placeholder="Password" onChange={e => this.setState({ password: e.target.value})} required />
                         </div>
                         <div className="submitinput">
                             <input type="submit" value="Login" />
                         </div>
                     </form>
                 </div>
+                <a className="forgotlogin" href="mailto:tvaasports@gmail.com?Subject=Forgot%20Password">Forgot your login?</a>
             </div>
         );
     }

@@ -2,7 +2,7 @@
 
 .loginheader {
     background-color: $color1;
-    height: 5%;
+    height: 60px;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
 }
@@ -11,6 +11,7 @@
     background-color: $color3;
     width: 30%;
     margin: auto;
+    height: 355px;
     margin-top: 45px;
     border-radius: 25px;
     min-width: 450px;
@@ -46,4 +47,46 @@ label {
 input {
     display: block;
     margin: auto;
+    width: 60%;
+    background-color: $color3;
+    border: 3px $color1 solid;
+    padding: 16px 14px;
+    border-radius: 25px;
+    text-align: center;
+    color: $color2;
+    margin-top: 25px;
+    font-size: 16px;
+}
+
+input[type=submit] {
+    color: $color5;
+    background-color: #27C229;
+    border: none;
+    width: 30%;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#errormessage {
+    display: none;
+    border: 3px #D0635C solid;
+    border-radius: 25px;
+    width: 80%;
+    background-color: #F8CCCB;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.errormessagetext {
+    font-size: 18px;
+    color: rgb(121, 93, 93);
+    text-align: center;
+}
+
+.forgotlogin {
+    text-align: center;
+    color: $color2;
+    display: flex;
+    justify-content: center;
 }
