@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Login from './components/Login';
 import Games from './components/Games';
 import Teams from './components/Teams';
+import AdminPage from './components/AdminPage';
 
 
 
@@ -17,6 +18,7 @@ class App extends Component {
         <Route path="/games" component={Games} />
         <Route path="/teams" component={Teams} />
         <Route path="/login" component={Login} />
+        <Route path="/admin" component={AdminPage} />
       </Router>
     </div>
     );
