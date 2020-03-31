@@ -34,7 +34,7 @@ class LoginForm extends Component {
             }
         )
         .then(res => {
-            if (res.status === 401) {
+            if (res.status === 403) {
                 document.getElementById("errormessage").style.display = "flex";
                 document.getElementById("formcontainer").style.height = "425px";
             } if (res.status === 200) {
