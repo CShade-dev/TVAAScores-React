@@ -28,7 +28,7 @@ nav {
 .nav:not(:first-of-type) {
     margin-left: 15px;
   }
-  .nav:first-of-type {
+  #firstnav {
     margin-left: 20vw;
   }
   .logo {
@@ -54,7 +54,9 @@ nav {
 #hamburger {
     display: none;
 }
-
+button {
+    cursor: pointer;
+}
 .nav:hover {
     background-color: rgba(0, 70, 99, 1);
 }

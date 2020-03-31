@@ -17,7 +17,7 @@ const mapDispatchToProps = dispatch => {
 class AdminPage extends Component {
     state = {};
 
-    componentWillMount(){
+    componentDidMount(){
         fetch(
             "http://localhost:9000/admin", 
             {method: 'GET'}
@@ -25,8 +25,10 @@ class AdminPage extends Component {
         .then(res => {
             if (res.status === 403) {
                 this.props.deauthenticate()
+                this.forceUpdate()
             } if (res.status === 200){
                 this.props.authenticate()
+                this.forceUpdate()
             }
         })
     }

@@ -7,13 +7,22 @@ import { Link } from "react-router-dom";
 function mapStateToProps(state) {
     return { authenticated: state.authenticated }
 }
+const mapDispatchToProps = dispatch => {
+    return {
+      authenticate: () => dispatch({ type: 'AUTH' }),
+      deauthenticate: () => dispatch({ type: 'DEAUTH' })
+    }
+  }
 
 class Header extends Component {
     navFunc = () => {
         const el = document.querySelector("nav");
-        console.log(el);
         el.classList.toggle("change");
     };
+    signOut = () => {
+        this.props.deauthenticate()
+        window.location.assign("http://localhost:3000/")
+    }
     render() {
         return this.props.authenticated ? (
                 <nav>
@@ -26,9 +35,9 @@ class Header extends Component {
                     </Link>
                 </div>
                 <div className="boxes">
-                    <Link to="/games" className="nav">GAMES</Link>
+                    <Link to="/games" className="nav" id="firstnav">GAMES</Link>
                     <Link to="/teams" className="nav">TEAMS</Link>
-                    <Link to="/login" className="nav">SIGN OUT</Link>
+                    <button className="nav" onClick={this.signOut}>SIGN OUT</button>
                 </div>
                     <div className="hamburger" onClick={this.navFunc}>
                         <div className="bar1"></div>
@@ -38,7 +47,7 @@ class Header extends Component {
                 <div className="mobileboxes">
                     <Link to="/games" className="mobilenav">GAMES</Link>
                     <Link to="/teams" className="mobilenav">TEAMS</Link>
-                    <Link to="/login" className="mobilenav">SIGN OUT</Link>
+                    <button className="mobilenav" onClick={this.signOut}>SIGN OUT</button>
                 </div>
                 </nav>
         ) : (
@@ -52,7 +61,7 @@ class Header extends Component {
             </Link>
         </div>
         <div className="boxes">
-            <Link to="/games" className="nav">GAMES</Link>
+            <Link to="/games" className="nav" id="firstnav">GAMES</Link>
             <Link to="/teams" className="nav">TEAMS</Link>
             <Link to="/login" className="nav">LOGIN</Link>
         </div>
@@ -71,4 +80,4 @@ class Header extends Component {
     }
 }
 
-export default connect(mapStateToProps)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

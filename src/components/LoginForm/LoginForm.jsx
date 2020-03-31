@@ -22,7 +22,6 @@ class LoginForm extends Component {
         password: "",
     };
     onSubmit = async e => {
-        console.log(this.state)
         e.preventDefault();
         await fetch(
           "http://localhost:9000/login",

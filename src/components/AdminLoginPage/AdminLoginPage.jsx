@@ -3,9 +3,7 @@ import SVG from "react-inlinesvg";
 import user from "../../assets/user.svg";
 import "./styles.scss";
 import { connect } from 'react-redux';
-import { createBrowserHistory } from 'history';
 
-const history = createBrowserHistory();
 
 function mapStateToProps(state) {
     return state
@@ -22,7 +20,6 @@ class AdminLoginForm extends Component {
         password: "",
     };
     onSubmit = async e => {
-        console.log(this.state)
         e.preventDefault();
         await fetch(
           "http://localhost:9000/admin",
@@ -40,7 +37,6 @@ class AdminLoginForm extends Component {
                 document.getElementById("formcontainer").style.height = "425px";
             } if (res.status === 200) {
                 this.props.authenticate()
-                window.location.assign("http://localhost:3000/admin")
             }
         }
         )

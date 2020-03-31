@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import "./styles.scss";
 
-class CreateMatch extends Component {
+class UsersPanel extends Component {
     state = {};
 
     render() {
-        return (<h1>CreateMatch</h1>);
+        return (<h1>UsersPanel</h1>);
     }
 }
 
-export default CreateMatch;
+export default UsersPanel;
