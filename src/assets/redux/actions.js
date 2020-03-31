@@ -8,3 +8,14 @@ export function deauthenticate() {
 export function authenticate() {
     return { type: AUTH }
 }
+
+export const ADMINDEAUTH = 'ADMINDEAUTH'
+export const ADMINAUTH = 'ADMINAUTH'
+
+export function admindeauthenticate() {
+    return { type: ADMINDEAUTH }
+}
+
+export function adminauthenticate() {
+    return { type: ADMINAUTH }
+}

@@ -5,7 +5,6 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux';
 import authentication from './assets/redux/reducers';
-import { authenticate, deauthenticate } from './assets/redux/actions';
 import { Provider } from 'react-redux';
 const store = createStore(authentication)
 

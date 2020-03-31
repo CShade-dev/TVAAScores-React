@@ -1,18 +1,27 @@
-import { DEAUTH, AUTH } from './actions';
+import { DEAUTH, AUTH, ADMINAUTH, ADMINDEAUTH } from './actions';
 
-const initialState = {
-    authenticated: false
-}
 
-function authentication (state = initialState, action) {
+function authentication (state = {authenticated: false, adminauthenticated: false}, action) {
     switch (action.type) {
         case DEAUTH:
             return Object.assign({}, state, {
-                authenticated: false
+                authenticated: false,
+                adminauthenticated: false
             })
         case AUTH:
             return Object.assign({}, state, {
-                authenticated: true
+                authenticated: true,
+                adminauthenticated: false
+            })
+        case ADMINDEAUTH:
+            return Object.assign({}, state, {
+                authenticated: false,
+                adminauthenticated: false
+            })
+        case ADMINAUTH:
+            return Object.assign({}, state, {
+                authenticated: true,
+                adminauthenticated: true
             })
         default:
             return state
