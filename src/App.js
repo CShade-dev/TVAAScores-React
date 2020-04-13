@@ -4,7 +4,7 @@ import Landing from './components/Landing';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Login from './components/Login';
 import Games from './components/Games';
-import Teams from './components/Teams';
+import TeamsPage from './components/TeamsPage';
 import AdminPage from './components/AdminPage';
 
 
@@ -16,7 +16,7 @@ class App extends Component {
         <Router basename="/">
         <Route path="/" exact component={Landing} />
         <Route path="/games" component={Games} />
-        <Route path="/teams" component={Teams} />
+        <Route path="/teams" component={TeamsPage} />
         <Route path="/login" component={Login} />
         <Route path="/admin" component={AdminPage} />
       </Router>
